@@ -3,13 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry (2) {
-                    sh 'python --version'
-                    sh 'python main.py'
-                }
-                timeout(time: 1, unit: 'MINUTES') {
-                    echo 'TIMEOUT failure'
-                }
+                sh 'python --version'
+                sh 'python main.py'
             }
         }
     }
