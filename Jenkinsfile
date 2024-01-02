@@ -5,7 +5,6 @@ pipeline {
             steps {
                 retry (2) {
                     sh 'python --version'
-                    sh 'ls -all'
                     sh 'python main.py'
                 }
                 timeout(time: 1, unit: 'MINUTES') {
