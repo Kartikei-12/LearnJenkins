@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'python --version'
-                sh 'pwd'
+                sh 'ls -all'
                 sh 'python main.py'
             }
         }
